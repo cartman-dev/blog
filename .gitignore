@@ -1,3 +1,10 @@
+# Site for deployment
 _site/
+
+# Node.js
 node_modules/
 package-lock.json
+
+# Firebase
+.firebase/
+
