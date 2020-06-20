@@ -1,5 +1,88 @@
----
-layout: layouts/base.njk
-templateClass: templ-home
----
-{{ content | safe }}
+<!doctype html>
+<html lang="en">
+  {% include "components/head.njk" %}
+  <body>
+    <section class="hero is-success">
+        <div class="hero-head">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item logo-text is-size-3 has-text-white" href="http://localhost:8080/">
+                        CARTMAN•DEV
+                    </a>
+
+                    <!--             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a> -->
+                </div>
+
+                <div id="navbar-menu" class="navbar-menu is-active has-text-white">
+                    <div class="navbar-start">
+                        {%- for entry in collections.all | eleventyNavigation %}
+                            <a class="navbar-item" href="{{ entry.url | url }}">{{ entry.title }}</a>
+                        {%- endfor %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="img/cartman_this_guy.png">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <h1 class="title">
+                        Full-stack web development
+                    </h1>
+                    <h2 class="subtitle">
+                        Sweeeeeet...
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="columns">
+            <div class="column is-three-quarters">
+
+            </div>
+            <div class="column">
+                <h3 class="title is-4">Recent Posts</h1>
+
+
+
+                <ol reversed class="postlist" style="counter-reset: start-from 5">
+
+                    <li class="postlist-item">
+                        <a href="/posts/fourthpost/" class="postlist-link">This is my fourth post.</a>
+                        <time class="postlist-date" datetime="2018-09-30">30 Sep 2018</time>
+
+                        <a href="/tags/second-tag/" class="tag">second-tag</a>
+                    </li>
+
+                    <li class="postlist-item">
+                        <a href="/posts/thirdpost/" class="postlist-link">This is my third post.</a>
+                        <time class="postlist-date" datetime="2018-08-24">24 Aug 2018</time>
+
+                        <a href="/tags/second-tag/" class="tag">second-tag</a>
+                    </li>
+
+                    <li class="postlist-item">
+                        <a href="/posts/secondpost/" class="postlist-link">This is my second post.</a>
+                        <time class="postlist-date" datetime="2018-07-04">04 Jul 2018</time>
+
+                        <a href="/tags/number-2/" class="tag">number-2</a>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+
+    </section>
+    {% include "components/footer.njk" %}
+  </body>
+</html>

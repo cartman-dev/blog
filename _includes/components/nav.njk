@@ -1,0 +1,15 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <h1 class="title">
+            <a class="navbar-item" href="{{ '/' | url }}">{{ metadata.title }}</a>
+        </h1>
+    </div>
+    {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+    <div id="navbar-top" class="navbar-menu">
+        <div class="navbar-start">
+            {%- for entry in collections.all | eleventyNavigation %}
+                <a class="navbar-item" href="{{ entry.url | url }}">{{ entry.title }}</a>
+            {%- endfor %}
+        </div>
+    </div>
+</nav>
