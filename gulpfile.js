@@ -24,29 +24,29 @@ var settings = {
   // Paths to project folders ///////////////////////////////////////////////////
   var paths = {
     input: 'src/',
-    output: 'dist/',
+    output: '_site/',
     scripts: {
       input: 'src/js/**/*.js',
       polyfills: '.polyfill.js',
-      output: 'dist/js/'
+      output: '_site/js/'
     },
     assets: {
       input: 'src/assets/img/*.{jpg,jpeg,gif,webm,webp,png,zip}',
-      output: 'dist/assets/img/'
+      output: '_site/assets/img/'
 	},
 	fonts: {
 	  input: 'src/assets/fonts/*.{woff,woff2}',
-	  output: 'dist/assets/fonts/'
+	  output: '_site/assets/fonts/'
 	},
     styles: {
       input: 'src/scss/**/main.scss',
-      output: 'src/_includes/'
+      output: '_site/_includes/'
     },
     svgs: {
       input: 'src/assets/img/*.svg',
-      output: 'dist/assets/img/'
+      output: '_site/assets/img/'
     },
-    reload: './dist/'
+    reload: './_site/'
   };
 
 

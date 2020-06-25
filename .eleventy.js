@@ -39,11 +39,11 @@ module.exports = function (eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
-  let merkdownItAnchor = require("markdown-it-anchor");
+  let markdownItAnchor = require("markdown-it-anchor");
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("favicon.ico");
@@ -95,7 +95,6 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
-    passthroughFileCopy: true,
 
     // These are all optional, defaults are shown:
     dir: {
