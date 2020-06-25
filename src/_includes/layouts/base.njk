@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+  {% include "components/head.njk" %}
+
+  <body>
+  <div id="skip">
+  <a href="#content">Skip Content</a>
+  </div>
+  <div{% if navClass %} class="{{ navClass }}{% endif %} container">
+
+    {% include "components/nav.njk" %}
+
+  </div>
+    <main class="{% if templateclass %}{{ templateClass }} {% endif %} {% if bgColor %} bg-{{ bgColor }} {% endif %}" id="content">
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+
+  </body>
+</html>

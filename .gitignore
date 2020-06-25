@@ -1,5 +1,6 @@
 # Site for deployment
 _site/
+css/main.css.map
 
 # Node.js
 node_modules/
@@ -8,3 +9,9 @@ package-lock.json
 # Firebase
 .firebase/
 
+# Caches
+.cache
+.sass-cache/
+
+# ENV
+.env*

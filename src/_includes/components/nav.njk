@@ -1,0 +1,26 @@
+<header class="site-header wrapper">
+    <div class="logo">
+        <a href="{{ '/' | url }}">
+            <h2>Logo</h2>
+        </a>
+    </div>
+    <nav>
+        <ul class="linklist">
+            {% set navigationItems = navigation.header %}
+            {% for item in navigationItems %}
+                {% set externalAttribute = "" %}
+
+                {% if item.external %}
+                    {% set externalAttribute = ' rel="external"' %}
+                {% endif %}
+
+                <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+                    <a class="{% if colorMode %}{{ colorMode }}{% endif %}{% if item.external %} right-arrow{% endif %}"
+                        href="{{ item.url }}" {{ externalAttribute | safe }}>
+                        {{ item.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

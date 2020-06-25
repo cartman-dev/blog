@@ -1,0 +1,26 @@
+{
+    "header": [
+        {
+            "text": "Home",
+            "url": "/",
+            "external": false
+        },
+        {
+            "text": "Writing",
+            "url": "/posts",
+            "external": false
+        }
+    ],
+    "footer": [
+        {
+            "text": "Email",
+            "url": "mailto:inquiry@cartman.dev",
+            "external": true
+        },
+        {
+            "text": "Github",
+            "url": "https://github.com/cartman-dev",
+            "external": true
+        }
+    ]
+}
